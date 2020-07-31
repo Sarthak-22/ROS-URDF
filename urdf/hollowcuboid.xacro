@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="hollowcuboid" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find hollowcuboid_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find hollowcuboid_description)/urdf/hollowcuboid.trans" />
+<xacro:include filename="$(find hollowcuboid_description)/urdf/hollowcuboid.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004891358750666235 0.037135247519061505 0.020839331427533428"/>
+    <mass value="23.38999157629203"/>
+    <inertia ixx="0.133272" ixy="0.001081" ixz="-1.9e-05" iyy="0.303851" iyz="-4e-06" izz="0.261336"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hollowcuboid_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hollowcuboid_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
